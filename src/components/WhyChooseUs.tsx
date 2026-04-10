@@ -13,28 +13,32 @@ const WhyChooseUs = () => {
   const { ref, isInView } = useInView();
 
   return (
-    <section className="relative bg-secondary/30 py-24 lg:py-32" ref={ref}>
-      <div className="container mx-auto px-4">
-        <div className="mx-auto max-w-2xl text-center">
-          <span className="font-heading text-sm uppercase tracking-widest text-gold">Why Us</span>
-          <h2 className="mt-4 font-heading text-3xl font-bold sm:text-4xl lg:text-5xl">
+    <section className="relative bg-card/50 section-padding" ref={ref}>
+      <div className="ankara-pattern absolute inset-0 opacity-10" />
+      <div className="container relative mx-auto px-4">
+        <div className="section-header">
+          <span className="inline-block rounded-full border border-gold/20 bg-gold/5 px-4 py-1.5 font-heading text-xs uppercase tracking-[0.2em] text-gold">Why Us</span>
+          <h2 className="mt-6 font-heading text-3xl font-extrabold sm:text-4xl lg:text-5xl">
             Why Choose <span className="text-gradient-gold">Just E-Shelter</span>
           </h2>
+          <p className="mt-4 font-body text-base text-secondary-foreground lg:text-lg">
+            Trusted by clients across Lagos for premium construction excellence.
+          </p>
         </div>
 
-        <div className="mt-16 flex flex-wrap justify-center gap-8">
+        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {reasons.map((r, i) => (
             <div
               key={r.title}
-              className={`flex w-full flex-col items-center text-center sm:w-[calc(50%-1rem)] lg:w-[calc(20%-1.6rem)] ${
+              className={`group flex flex-col items-center rounded-xl border border-border bg-card p-8 text-center transition-all duration-500 hover:border-gold/30 hover:-translate-y-1 hover:shadow-2xl hover:shadow-gold/5 ${
                 isInView ? "animate-fade-up" : "opacity-0"
               }`}
               style={{ animationDelay: `${i * 0.1}s`, animationFillMode: "forwards" }}
             >
-              <div className="flex h-16 w-16 items-center justify-center rounded-full border border-gold/20 bg-gold/5 text-gold">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gold/10 text-gold transition-all duration-300 group-hover:bg-gold group-hover:text-primary-foreground group-hover:shadow-lg group-hover:shadow-gold/20">
                 <r.icon size={28} />
               </div>
-              <h3 className="mt-5 font-heading text-base font-semibold">{r.title}</h3>
+              <h3 className="mt-5 font-heading text-base font-bold">{r.title}</h3>
               <p className="mt-2 font-body text-sm leading-relaxed text-muted-foreground">{r.desc}</p>
             </div>
           ))}
