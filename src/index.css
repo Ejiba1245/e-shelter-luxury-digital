@@ -37,9 +37,9 @@
     --radius: 0.5rem;
 
     /* Custom tokens */
-    --gold: 35 52% 65%;
-    --gold-light: 38 60% 72%;
-    --gold-dark: 32 45% 50%;
+    --gold: 45 95% 55%;
+    --gold-light: 48 100% 65%;
+    --gold-dark: 40 90% 45%;
     --charcoal: 0 0% 10%;
     --charcoal-deep: 0 0% 5%;
     --forest: 160 30% 20%;
