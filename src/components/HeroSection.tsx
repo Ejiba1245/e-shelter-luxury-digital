@@ -1,5 +1,5 @@
-import heroBg from "@/assets/hero-bg.jpg";
-import { ArrowRight, Play } from "lucide-react";
+import heroBg from "@/assets/proj-estate-finished.jpeg";
+import { ArrowRight, Phone } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -8,13 +8,13 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={heroBg}
-          alt="Luxury modern home at golden hour in Lagos"
+          alt="Just E-Shelter completed luxury estate in Lagos"
           className="h-full w-full object-cover scale-105"
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/50 to-background" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-transparent to-background/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/40 to-background/70" />
       </div>
 
       {/* Ankara pattern overlay */}
@@ -26,19 +26,20 @@ const HeroSection = () => {
           {/* Badge */}
           <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-gold/20 bg-gold/5 px-5 py-2 opacity-0 animate-fade-up" style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}>
             <div className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse" />
-            <span className="font-body text-xs uppercase tracking-[0.2em] text-gold">Premium Real Estate & Luxury Living</span>
+            <span className="font-body text-xs uppercase tracking-[0.2em] text-gold">Construction · Real Estate · Lagos, Nigeria</span>
           </div>
 
           <h1 className="font-heading text-5xl font-extrabold leading-[1.05] tracking-tight opacity-0 animate-fade-up sm:text-6xl md:text-7xl lg:text-8xl" style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}>
-            Building Tomorrow's{" "}
-            <span className="text-gradient-gold">Legacy</span>
+            We Build{" "}
+            <span className="text-gradient-gold">Landmarks</span>
             <br className="hidden sm:block" />
-            {" "}Today
+            {" "}That Last.
           </h1>
 
           <p className="mx-auto mt-8 max-w-2xl font-body text-lg leading-relaxed text-secondary-foreground opacity-0 animate-fade-up sm:text-xl" style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}>
-            We craft exceptional homes and estates with uncompromising quality,
-            innovative design, and meticulous attention to detail across Lagos.
+            Just e-Shelter Construction Limited is Lagos's trusted partner for premium
+            residential, estate, and commercial developments — engineered with precision,
+            delivered with integrity.
           </p>
 
           <div className="mt-12 flex flex-col items-center justify-center gap-4 opacity-0 animate-fade-up sm:flex-row sm:gap-5" style={{ animationDelay: "0.8s", animationFillMode: "forwards" }}>
@@ -46,15 +47,15 @@ const HeroSection = () => {
               href="#projects"
               className="group bg-gradient-gold inline-flex items-center gap-3 rounded-lg px-8 py-4 font-heading text-sm font-bold uppercase tracking-wider text-primary-foreground transition-all duration-300 hover:shadow-xl hover:shadow-gold/25 hover:scale-[1.02]"
             >
-              View Our Projects
+              Explore Our Projects
               <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
             </a>
             <a
               href="#contact"
               className="group inline-flex items-center gap-3 rounded-lg border border-gold/30 bg-gold/5 px-8 py-4 font-heading text-sm font-bold uppercase tracking-wider text-gold transition-all duration-300 hover:border-gold hover:bg-gold/10 hover:scale-[1.02]"
             >
-              <Play size={14} className="fill-gold" />
-              Get a Free Quote
+              <Phone size={14} />
+              Request a Quote
             </a>
           </div>
 

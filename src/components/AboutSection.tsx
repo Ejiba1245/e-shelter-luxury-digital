@@ -1,4 +1,5 @@
-import aboutBg from "@/assets/about-bg.jpg";
+import aboutBg from "@/assets/team-builder.jpeg";
+import aboutSecondary from "@/assets/proj-estate-finished.jpeg";
 import { useInView } from "@/hooks/useInView";
 import { CheckCircle2 } from "lucide-react";
 
@@ -26,19 +27,23 @@ const AboutSection = () => {
         <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
           {/* Image */}
           <div className={`relative ${isInView ? "animate-slide-in-left" : "opacity-0"}`}>
-            <div className="relative overflow-hidden rounded-xl">
+            <div className="relative overflow-hidden rounded-2xl">
               <img
                 src={aboutBg}
-                alt="Luxury home at dusk"
-                className="h-[450px] w-full object-cover lg:h-[560px]"
+                alt="Just e-Shelter builder on site in Lagos"
+                className="h-[450px] w-full object-cover object-top lg:h-[560px]"
                 loading="lazy"
                 width={1920}
                 height={800}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/70 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent" />
+            </div>
+            {/* Inset secondary image */}
+            <div className="absolute -bottom-10 -left-6 hidden h-48 w-56 overflow-hidden rounded-xl border-4 border-background shadow-2xl sm:block">
+              <img src={aboutSecondary} alt="Completed Just e-Shelter estate" className="h-full w-full object-cover" loading="lazy" />
             </div>
             {/* Floating card */}
-            <div className="absolute -bottom-6 -right-4 rounded-xl border border-border bg-card p-6 shadow-2xl sm:right-6">
+            <div className="absolute -bottom-6 -right-4 rounded-xl border border-gold/20 bg-card p-6 shadow-2xl sm:right-6">
               <div className="text-center">
                 <div className="font-heading text-4xl font-extrabold text-gold">12+</div>
                 <div className="mt-1 font-body text-xs uppercase tracking-widest text-muted-foreground">Years of<br />Excellence</div>
@@ -50,14 +55,16 @@ const AboutSection = () => {
 
           {/* Text */}
           <div className={isInView ? "animate-slide-in-right" : "opacity-0"}>
-            <span className="inline-block rounded-full border border-gold/20 bg-gold/5 px-4 py-1.5 font-heading text-xs uppercase tracking-[0.2em] text-gold">About Us</span>
+            <span className="inline-block rounded-full border border-gold/20 bg-gold/5 px-4 py-1.5 font-heading text-xs uppercase tracking-[0.2em] text-gold">About The Company</span>
             <h2 className="mt-6 font-heading text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
-              Crafting <span className="text-gradient-gold">Exceptional</span> Spaces
+              Engineering <span className="text-gradient-gold">Excellence</span>, Built In Lagos.
             </h2>
             <p className="mt-6 font-body text-base leading-[1.8] text-secondary-foreground lg:text-lg">
-              Just E-Shelter Nig Ltd delivers exceptional residential and commercial spaces 
-              with uncompromising quality, innovation, and attention to detail across Lagos. 
-              We transform visions into architectural masterpieces that stand the test of time.
+              Just e-Shelter Construction Limited is a Lagos-based construction firm building
+              residential estates, bespoke homes, and commercial developments to international
+              standards. Led by certified builders and registered with the Lagos State Chapter
+              of the Builders' Association, we combine field expertise with disciplined project
+              management to deliver structures that endure.
             </p>
 
             {/* Highlights */}

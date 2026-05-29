@@ -1,22 +1,24 @@
 import { useState } from "react";
 import { useInView } from "@/hooks/useInView";
 import { ArrowUpRight } from "lucide-react";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-import project4 from "@/assets/project-4.jpg";
-import project5 from "@/assets/project-5.jpg";
-import project6 from "@/assets/project-6.jpg";
+import project1 from "@/assets/proj-estate-finished.jpeg";
+import project2 from "@/assets/proj-apartments-finished.jpeg";
+import project3 from "@/assets/proj-commercial-wip.jpeg";
+import project4 from "@/assets/proj-villa-scaffold.jpeg";
+import project5 from "@/assets/proj-duplex-wip.jpeg";
+import project6 from "@/assets/proj-estate-wip.jpeg";
+import project7 from "@/assets/proj-frame-wip.jpeg";
 
 const filters = ["All", "Residential", "Estates", "Commercial"];
 
 const projects = [
-  { img: project1, title: "The Meridian Villa", location: "Lekki Phase 1", year: "2024", category: "Residential", desc: "5-bedroom luxury villa with pool and smart home integration." },
-  { img: project2, title: "Eden Gardens Estate", location: "Ajah, Lagos", year: "2023", category: "Estates", desc: "30-unit gated community with modern amenities and landscaping." },
-  { img: project3, title: "Apex Business Tower", location: "Victoria Island", year: "2023", category: "Commercial", desc: "12-storey commercial complex with premium office suites." },
-  { img: project4, title: "The Opal Residence", location: "Ikoyi", year: "2024", category: "Residential", desc: "Bespoke penthouse interior with imported Italian finishes." },
-  { img: project5, title: "Harmony Villas", location: "Sangotedo", year: "2024", category: "Residential", desc: "Contemporary duplex development with premium structural quality." },
-  { img: project6, title: "Azure Waterfront", location: "Lekki", year: "2023", category: "Estates", desc: "Waterfront luxury apartments with panoramic lagoon views." },
+  { img: project1, title: "Twin Luxury Residence", location: "Ajah, Lagos", year: "2025", category: "Residential", desc: "Completed twin-block luxury residence delivered to handover standard with premium finishing." },
+  { img: project2, title: "Marina View Apartments", location: "Lekki, Lagos", year: "2024", category: "Estates", desc: "Multi-storey residential apartment block finished in signature blue & white corporate palette." },
+  { img: project3, title: "Commercial Mixed-Use", location: "Lekki-Epe Corridor", year: "2025", category: "Commercial", desc: "Large-scale 4-storey commercial complex currently topping out with structural roofing in progress." },
+  { img: project4, title: "Contemporary Duplex", location: "Ajah, Lagos", year: "2025", category: "Residential", desc: "Bespoke 5-bedroom contemporary duplex with rooftop terrace, in advanced finishing stage." },
+  { img: project5, title: "Modern Townhouse", location: "Sangotedo, Lagos", year: "2025", category: "Residential", desc: "Three-storey modern townhouse under structural completion with custom façade detailing." },
+  { img: project6, title: "Gated Estate Development", location: "Ibeju-Lekki", year: "2025", category: "Estates", desc: "Multi-unit gated estate development with concurrent block-work and roofing across all units." },
+  { img: project7, title: "Terrace Block Project", location: "Ajah, Lagos", year: "2024", category: "Estates", desc: "Premium terrace block at decking stage — engineered structural frame for long-term integrity." },
 ];
 
 const ProjectsSection = () => {

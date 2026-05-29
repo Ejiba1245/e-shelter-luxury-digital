@@ -1,4 +1,5 @@
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
+import logo from "@/assets/logo.jpeg";
 
 const quickLinks = [
   { label: "Home", href: "#home" },
@@ -23,13 +24,30 @@ const Footer = () => {
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <span className="text-gradient-gold font-heading text-xl font-extrabold tracking-wider">
-              JUST E-SHELTER
-            </span>
-            <p className="mt-4 font-body text-sm leading-relaxed text-muted-foreground">
-              Premium construction and real estate development company delivering exceptional 
-              spaces across Lagos, Nigeria.
+            <div className="flex items-center gap-3">
+              <img src={logo} alt="Just e-Shelter Construction Limited" className="h-12 w-12 rounded-md object-cover ring-1 ring-gold/30" />
+              <div className="leading-tight">
+                <div className="font-heading text-base font-extrabold">Just <span className="text-gradient-gold">e-Shelter</span></div>
+                <div className="font-body text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Construction Limited</div>
+              </div>
+            </div>
+            <p className="mt-5 font-body text-sm leading-relaxed text-muted-foreground">
+              A Lagos-based construction company building premium residential, estate, and
+              commercial developments to international standards.
             </p>
+            <div className="mt-6 flex gap-3">
+              {[
+                { Icon: Facebook, href: "#", label: "Facebook" },
+                { Icon: Instagram, href: "#", label: "Instagram" },
+                { Icon: Linkedin, href: "#", label: "LinkedIn" },
+                { Icon: MessageCircle, href: "https://wa.me/2348063109568", label: "WhatsApp" },
+              ].map(({ Icon, href, label }) => (
+                <a key={label} href={href} aria-label={label} target="_blank" rel="noopener noreferrer"
+                   className="flex h-9 w-9 items-center justify-center rounded-md border border-border bg-card text-muted-foreground transition-all duration-300 hover:border-gold/40 hover:bg-gold/10 hover:text-gold">
+                  <Icon size={15} />
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Quick Links */}
